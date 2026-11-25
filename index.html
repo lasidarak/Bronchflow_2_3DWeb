@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BronchFlow — Intelligent Asthma Monitoring. Clinical Precision.</title>
+  <meta name="description"
+    content="BronchFlow is a continuous clinical-grade wearable that pairs multi-sensor acoustic tracking with on-device AI to detect respiratory anomalies and asthma triggers early." />
+  <link rel="icon" type="image/png" href="assets/Logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');G
+      var theme = saved || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION (Liquid Glass Functional Layer) ===== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="BronchFlow Home">
+        <img src="assets/Logo-light.png" alt="BronchFlow logo" class="brand-logo brand-logo-light" />
+        <img src="assets/Logo-dark.png" alt="BronchFlow logo" class="brand-logo brand-logo-dark" />
+      </a>
+
+      <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main Navigation">
+        <a href="#home" class="nav-link is-active">Overview</a>
+        <a href="#problem" class="nav-link">Challenge</a>
+        <a href="#meet" class="nav-link">Device</a>
+        <a href="#features" class="nav-link">Capabilities</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#technology" class="nav-link">Technology</a>
+        <a href="#healthcare" class="nav-link">Healthcare</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Light / Dark Theme Switcher -->
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme"
+          title="Toggle theme">
+          <svg class="theme-icon theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
+        <button class="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ===== HERO SECTION (Cinematic Hardware Showcase) ===== -->
+    <section class="hero hero-showcase" id="home" aria-labelledby="hero-title">
+      <!-- Autonomous Ambient Blue Light Shine -->
+      <div class="hero-ambient-glow" id="heroAmbientGlow" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-editorial">
+          <span class="hero-eyebrow">BronchFlow</span>
+          <h1 class="hero-display-title" id="hero-title">
+            <span class="smooth-reveal-wrap line-1">
+              <span class="smooth-reveal-text">Breathe Better.</span>
+            </span><br />
+            <span class="smooth-reveal-wrap line-2 hero-title-accent">
+              <span class="smooth-reveal-text">Live Better.</span>
+            </span>
+          </h1>
+          <p class="hero-sub">
+            BronchFlow is a wearable respiratory monitoring system.
+          </p>
+        </div>
+
+        <!-- Centerpiece 3D Device Video Stage -->
+        <div class="hero-centerpiece-stage">
+          <div class="hero-video-wrapper">
+            <video class="hero-device-center-video" autoplay muted playsinline preload="auto"
+              aria-label="BronchFlow chest-worn intelligent respiratory sensor demonstration">
+              <source src="bronchflow device no shine BackgroundRemover.webm" type="video/webm" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROBLEM SECTION (Statistical Epidemiological Burden) ===== -->
+    <section class="section section-problem" id="problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The Global Challenge</span>
+          <h2 id="problem-title">Asthma Doesn’t Wait.</h2>
+          <p>
+            Millions manage chronic respiratory disease with reactive inhaler use after symptoms become severe.
+            BronchFlow shifts care to continuous, proactive early detection.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num-wrap">
+              <span class="stat-num" data-count="300">300</span>
+              <span class="stat-suffix">M+</span>
+            </div>
+            <p class="stat-label">People worldwide currently diagnosed with chronic asthma</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num-wrap">
+              <span class="stat-num" data-count="2.5">2.5</span>
+              <span class="stat-suffix">M</span>
+            </div>
+            <p class="stat-label">Sri Lankans living with persistent respiratory conditions</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num-wrap">
+              <span class="stat-num" data-count="179">179</span>
+              <span class="stat-suffix">K</span>
+            </div>
+            <p class="stat-label">Emergency hospital admissions recorded annually</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num-wrap">
+              <span class="stat-num" data-count="455">455</span>
+              <span class="stat-suffix">K</span>
+            </div>
+            <p class="stat-label">Preventable deaths attributed to asthma every single year</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MEET BRONCHFLOW (Ergonomics & Sensor Architecture) ===== -->
+    <section class="section section-meet" id="meet" aria-labelledby="meet-title">
+      <div class="container two-col">
+        <div class="meet-visual">
+          <img src="assets/wallpaper.png" alt="Person wearing BronchFlow chest sensor during daily routine" />
+        </div>
+        <div class="meet-copy">
+          <span class="eyebrow">Hardware Architecture</span>
+          <h2 id="meet-title">Engineered to Disappear.<br />Built to Protect.</h2>
+          <p>
+            BronchFlow rests seamlessly on the sternum. Featuring medical-grade hypoallergenic silicone, biocompatible
+            sensors, and a featherlight chassis designed for 24/7 day and night tracking.
+          </p>
+
+          <ul class="spec-list">
+            <li class="spec-item">
+              <span class="spec-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <div class="spec-text">
+                <strong>Sub-Audible Acoustic Wheeze Transducers</strong>
+                <span>Captures bronchial breath sounds down to micro-vibrations before audible symptoms appear.</span>
+              </div>
+            </li>
+            <li class="spec-item">
+              <span class="spec-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <div class="spec-text">
+                <strong>On-Device Machine Learning Inference</strong>
+                <span>Continuous local analysis preserves patient data privacy while eliminating network latency.</span>
+              </div>
+            </li>
+            <li class="spec-item">
+              <span class="spec-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <div class="spec-text">
+                <strong>7-Day Continuous Battery Life</strong>
+                <span>Optimized ultra-low-power microcontrollers provide seven days of uninterrupted respiratory
+                  tracking.</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="#features" class="btn btn-secondary">Review Technical Specs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIFE WITH BRONCHFLOW (Gallery Across Generations - Panoramic Carousel) ===== -->
+    <section class="section section-why" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Universal Care</span>
+          <h2 id="why-title">Built for Every Breath. At Every Age.</h2>
+          <p>
+            From children at school to active adults and elderly individuals at home, BronchFlow provides personalized
+            respiratory reassurance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Panoramic Showcase Carousel -->
+      <div class="showcase-carousel-wrapper">
+        <div class="image-roll-container" id="demographicCarousel" role="region"
+          aria-label="Patient Demographic Gallery" tabindex="0">
+          <div class="image-roll-grid">
+
+            <article class="person-card is-active" data-index="0">
+              <img src="image roll/10y girl.png" alt="10-year-old child using BronchFlow" loading="lazy" />
+              <div class="person-card-scrim"></div>
+              <div class="person-card-content">
+                <div class="person-info">
+                  <span class="person-badge">Pediatric Care · Ages 5–12</span>
+                  <h4>Pediatric Protection</h4>
+                  <p>Gentle day & night monitoring for peace of mind while playing or sleeping.</p>
+                </div>
+                <a href="#features" class="showcase-pill-btn" aria-label="Learn more about Pediatric Protection">Learn
+                  more</a>
+              </div>
+            </article>
+
+            <article class="person-card" data-index="1">
+              <img src="image roll/20y girl.png" alt="Young adult managing asthma triggers" loading="lazy" />
+              <div class="person-card-scrim"></div>
+              <div class="person-card-content">
+                <div class="person-info">
+                  <span class="person-badge">Young Adults · Students</span>
+                  <h4>Active Students</h4>
+                  <p>Discreet wear under clothing with environmental trigger warnings.</p>
+                </div>
+                <a href="#features" class="showcase-pill-btn" aria-label="Learn more about Active Students">Learn
+                  more</a>
+              </div>
+            </article>
+
+            <article class="person-card" data-index="2">
+              <img src="image roll/35y man.png" alt="Professional adult athlete using BronchFlow" loading="lazy" />
+              <div class="person-card-scrim"></div>
+              <div class="person-card-content">
+                <div class="person-info">
+                  <span class="person-badge">Athletics & Performance</span>
+                  <h4>Exercise & Fitness</h4>
+                  <p>Tracks exercise-induced bronchoconstriction during workouts.</p>
+                </div>
+                <a href="#features" class="showcase-pill-btn" aria-label="Learn more about Exercise & Fitness">Learn
+                  more</a>
+              </div>
+            </article>
+
+            <article class="person-card" data-index="3">
+              <img src="image roll/60y man.png" alt="Senior adult managing respiratory health" loading="lazy" />
+              <div class="person-card-scrim"></div>
+              <div class="person-card-content">
+                <div class="person-info">
+                  <span class="person-badge">Clinical Pulmonology Sync</span>
+                  <h4>Adult Maintenance</h4>
+                  <p>Longitudinal respiratory trend reports shared with pulmonologists.</p>
+                </div>
+                <a href="#features" class="showcase-pill-btn" aria-label="Learn more about Adult Maintenance">Learn
+                  more</a>
+              </div>
+            </article>
+
+            <article class="person-card" data-index="4">
+              <img src="image roll/80y lady.png" alt="Elderly patient with caregiver monitoring" loading="lazy" />
+              <div class="person-card-scrim"></div>
+              <div class="person-card-content">
+                <div class="person-info">
+                  <span class="person-badge">Caregiver Connectivity</span>
+                  <h4>Elderly Care</h4>
+                  <p>Automatic emergency notifications dispatched to designated family caregivers.</p>
+                </div>
+                <a href="#features" class="showcase-pill-btn" aria-label="Learn more about Elderly Care">Learn more</a>
+              </div>
+            </article>
+
+            <article class="person-card" data-index="5">
+              <img src="image roll/80y man.png" alt="Geriatric clinical tracking" loading="lazy" />
+              <div class="person-card-scrim"></div>
+              <div class="person-card-content">
+                <div class="person-info">
+                  <span class="person-badge">Sleep & Nocturnal Health</span>
+                  <h4>Comprehensive Health</h4>
+                  <p>Continuous nocturnal sleep tracking to preempt early morning attacks.</p>
+                </div>
+                <a href="#features" class="showcase-pill-btn" aria-label="Learn more about Comprehensive Health">Learn
+                  more</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panoramic Carousel Navigation Dots & Indicator Pill -->
+        <div class="showcase-carousel-nav" role="tablist" aria-label="Demographic gallery navigation">
+          <button type="button" class="showcase-carousel-dot is-active" role="tab" aria-selected="true"
+            aria-label="Slide 1: Pediatric Protection" data-slide="0"></button>
+          <button type="button" class="showcase-carousel-dot" role="tab" aria-selected="false"
+            aria-label="Slide 2: Active Students" data-slide="1"></button>
+          <button type="button" class="showcase-carousel-dot" role="tab" aria-selected="false"
+            aria-label="Slide 3: Exercise & Fitness" data-slide="2"></button>
+          <button type="button" class="showcase-carousel-dot" role="tab" aria-selected="false"
+            aria-label="Slide 4: Adult Maintenance" data-slide="3"></button>
+          <button type="button" class="showcase-carousel-dot" role="tab" aria-selected="false"
+            aria-label="Slide 5: Elderly Care" data-slide="4"></button>
+          <button type="button" class="showcase-carousel-dot" role="tab" aria-selected="false"
+            aria-label="Slide 6: Comprehensive Health" data-slide="5"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KEY HIGHLIGHTS / CAPABILITIES ===== -->
+    <section class="section section-features" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Core Capabilities</span>
+          <h2 id="features-title">Six Pillars of Continuous Care.</h2>
+          <p>
+            An integrated clinical system designed to bring clarity, comfort, and immediate action to chronic asthma
+            management.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3>24/7 Clinical Monitoring</h3>
+            <p>Non-stop pulmonary surveillance that tracks respiratory rate, wheeze frequency, and coughing episodes
+              without disruption.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                </path>
+              </svg>
+            </div>
+            <h3>On-Device Neural Analytics</h3>
+            <p>Embedded edge algorithms baseline your unique breathing patterns and detect airway narrowing hours in
+              advance.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <h3>Pre-Symptomatic Smart Alerts</h3>
+            <p>Timely, discreet notifications delivered to patient, parent, and clinician devices before an attack
+              escalates.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h3>Clinical Trend Exports</h3>
+            <p>One-tap generation of standardized medical PDF and HL7/FHIR summaries for pulmonology consultations.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Healthcare System Sync</h3>
+            <p>Seamlessly integrates into modern hospital EHR systems, telehealth portals, and remote clinical
+              dashboards.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </div>
+            <h3>Biocompatible Ergonomics</h3>
+            <p>Sweat-resistant, skin-safe, hypoallergenic medical silicone engineered for seamless all-day and overnight
+              wear.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS (4-Phase Protocol) ===== -->
+    <section class="section section-how" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Medical Protocol</span>
+          <h2 id="how-title">Four Steps from Sensor to Specialist.</h2>
+          <p>
+            An effortless closed-loop framework engineered to operate unobtrusively in the background.
+          </p>
+        </div>
+
+        <div class="protocol-timeline">
+          <div class="protocol-card">
+            <span class="protocol-num">PHASE 01</span>
+            <h3>Wear & Calibrate</h3>
+            <p>Place the sensor on the sternum. BronchFlow establishes an individualized baseline of your thoracic
+              motion and breath sounds.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">PHASE 02</span>
+            <h3>Continuous Sensing</h3>
+            <p>Acoustic and motion sensors continuously monitor respiration, tracking airway turbulence, wheezes, and
+              night coughing.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">PHASE 03</span>
+            <h3>Pre-Attack Alerts</h3>
+            <p>When early airway narrowing is identified, an immediate notification is sent with personalized
+              remediation guidance.</p>
+          </div>
+          <div class="protocol-card">
+            <span class="protocol-num">PHASE 04</span>
+            <h3>Clinical Synchronization</h3>
+            <p>Your pulmonologist receives longitudinal objective data, eliminating recall bias during clinical
+              consultations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TECHNOLOGY & CLINICAL RIGOR ===== -->
+    <section class="section section-tech" id="technology" aria-labelledby="tech-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Engineering Rigor</span>
+          <h2 id="tech-title">Built with Clinical Precision.</h2>
+          <p>
+            Hardware, firmware, and machine learning harmonized for accuracy, long battery life, and complete data
+            confidentiality.
+          </p>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                </svg>
+              </div>
+              <h3>Dual Acoustic Transducers</h3>
+            </div>
+            <p>High-sensitivity micro-electromechanical acoustic sensors isolated from external ambient room noise.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3>Edge Neural Inference</h3>
+            </div>
+            <p>Custom quantized deep learning models process audio signatures on the device in microsecond cycles.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <h3>End-to-End Encryption</h3>
+            </div>
+            <p>AES-256 encrypted at rest and TLS 1.3 in transit. Fully compliant with international medical privacy
+              standards.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="1" y="6" width="18" height="12" rx="2"></rect>
+                  <line x1="23" y1="11" x2="23" y2="13"></line>
+                </svg>
+              </div>
+              <h3>7-Day Battery Efficiency</h3>
+            </div>
+            <p>Advanced power management ensures continuous day and night monitoring on a single USB-C charge.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3>Biocompatible Materials</h3>
+            </div>
+            <p>ISO 10993 tested medical silicone and ceramic backing designed for non-irritating sensitive skin contact.
+            </p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Interoperable Clinical APIs</h3>
+            </div>
+            <p>Direct integration support for HL7 FHIR protocols, hospital EHR software, and clinical research datasets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOR HEALTHCARE ECOSYSTEM ===== -->
+    <section class="section section-healthcare" id="healthcare" aria-labelledby="healthcare-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Connected Ecosystem</span>
+          <h2 id="healthcare-title">Tailored for Every Stakeholder.</h2>
+          <p>
+            BronchFlow closes the information gap between daily patient living, family caregivers, and clinical
+            treatment teams.
+          </p>
+        </div>
+
+        <!-- Segmented Role Selector -->
+        <div class="role-switcher-wrap">
+          <div class="segmented-control" role="tablist" aria-label="Ecosystem Stakeholders">
+            <button type="button" class="segmented-btn is-active" data-role="all" role="tab">All Perspectives</button>
+            <button type="button" class="segmented-btn" data-role="patients" role="tab">For Patients</button>
+            <button type="button" class="segmented-btn" data-role="doctors" role="tab">For Pulmonologists</button>
+            <button type="button" class="segmented-btn" data-role="caregivers" role="tab">For Caregivers</button>
+          </div>
+        </div>
+
+        <div class="role-cards-container">
+          <div class="role-card is-featured" data-role="patients">
+            <h3>For Patients</h3>
+            <p>Understand your individual triggers, track recovery milestones, and live confidently without fear of
+              sudden attacks.</p>
+            <ul class="role-checklist">
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Pre-attack early alert notifications</span>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Nocturnal sleep and coughing analysis</span>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Personalized environmental AQI correlation</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="role-card" data-role="doctors">
+            <h3>For Clinicians</h3>
+            <p>Transform subjective patient symptom recall into high-resolution longitudinal graphs during
+              consultations.</p>
+            <ul class="role-checklist">
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Standardized bronchial wheeze scoring</span>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Medication adherence and response tracking</span>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>HL7 FHIR export for hospital records</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="role-card" data-role="caregivers">
+            <h3>For Caregivers</h3>
+            <p>Know instantly when a child or elderly relative experiences early respiratory strain, wherever you are.
+            </p>
+            <ul class="role-checklist">
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Multi-user family mobile alerts</span>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Overnight monitoring notifications</span>
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span>Emergency escalation protocols</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT & MISSION ===== -->
+    <section class="section section-about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Our Mission</span>
+          <h2 id="about-title">Transforming Respiratory Healthcare.</h2>
+          <p>
+            Originating from a clinical research initiative to eliminate preventable asthma emergencies through
+            intelligent engineering.
+          </p>
+        </div>
+
+        <div class="about-mv-grid">
+          <div class="mv-card">
+            <h3>Our Mission</h3>
+            <p>To empower every individual living with asthma with continuous, proactive pulmonary insights —
+              transforming reactive emergencies into manageable daily wellness.</p>
+          </div>
+          <div class="mv-card">
+            <h3>Our Vision</h3>
+            <p>A global future where no person suffers a preventable asthma attack, supported by ubiquitous, empathetic,
+              and clinical-grade wearable intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="section section-cta" id="cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to Breathe with Certainty?</h2>
+          <p>Connect with our clinical engineering team to learn more about upcoming trial partnerships and device
+            availability.</p>
+          <div class="cta-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">Request Clinical Brief</a>
+            <a href="#meet" class="btn btn-secondary btn-lg">Review Device Specifications</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Connect With Us</span>
+          <h2 id="contact-title">Inquiries & Partnerships.</h2>
+          <p>Whether you represent a pulmonology clinic, research hospital, or are seeking information as a patient, our
+            team is at your service.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-info-list">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <strong>Email Address</strong>
+                <p>bronchflow@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <strong>Direct Telephone</strong>
+                <p>+94 76 041 8513 &nbsp;·&nbsp; +94 77 911 9399</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <strong>Headquarters</strong>
+                <p>8/3 Kirulapone Ave, Colombo-05, Sri Lanka</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <strong>Consultation Hours</strong>
+                <p>Monday – Friday · 9:00 AM – 5:00 PM (IST)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accessible Contact Form -->
+          <div class="contact-form-card">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" novalidate>
+              <input type="hidden" name="access_key" value="1f8bdcf7-e0fa-4a8a-834c-3b7f893ea438" />
+
+              <div class="form-group-row">
+                <div class="form-field">
+                  <label for="contactName">Full Name</label>
+                  <input type="text" id="contactName" name="name" required placeholder="Dr. Jane Doe"
+                    autocomplete="name" />
+                </div>
+                <div class="form-field">
+                  <label for="contactEmail">Email Address</label>
+                  <input type="email" id="contactEmail" name="email" required placeholder="name@institution.com"
+                    autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contactPhone">Phone Number (Optional)</label>
+                <input type="tel" id="contactPhone" name="phone" placeholder="+94 7X XXX XXXX" autocomplete="tel" />
+              </div>
+
+              <div class="form-field">
+                <label for="contactMessage">Message or Partnership Inquiry</label>
+                <textarea id="contactMessage" name="message" rows="4" required
+                  placeholder="How can our clinical team support you?"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Transmit Message</button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (Directory & Regulatory Governance) ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <p class="footer-disclaimer">
+          <strong>Clinical Investigational Notice:</strong> BronchFlow is an investigational medical IoT wearable
+          platform designed to support proactive pulmonary management. Content provided on this website is for
+          informational purposes and is not a substitute for professional clinical medical emergency diagnosis or
+          physician instructions. In emergency situations, follow established emergency medical protocols immediately.
+        </p>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#home" aria-label="BronchFlow Home">
+            <img src="assets/Logo-light.png" alt="BronchFlow logo" class="brand-logo brand-logo-light" />
+            <img src="assets/Logo-dark.png" alt="BronchFlow logo" class="brand-logo brand-logo-dark" />
+          </a>
+          <p>Continuous clinical respiratory intelligence. Redefining asthma care through precision sensing.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="#home">Overview</a></li>
+            <li><a href="#problem">The Challenge</a></li>
+            <li><a href="#meet">Device Design</a></li>
+            <li><a href="#features">Key Capabilities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Healthcare</h5>
+          <ul>
+            <li><a href="#how-it-works">Medical Protocol</a></li>
+            <li><a href="#technology">Sensor Technology</a></li>
+            <li><a href="#healthcare">For Clinicians</a></li>
+            <li><a href="#about">Our Mission</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Communications</h5>
+          <ul>
+            <li>bronchflow@gmail.com</li>
+            <li>+94 76 041 8513</li>
+            <li>Colombo-05, Sri Lanka</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 BronchFlow Medical Systems. All rights reserved.</span>
+        <span>BREATHE BETTER. LIVE WITH CERTAINTY.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
